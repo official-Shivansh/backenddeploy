@@ -44,10 +44,10 @@ userRoute.post("/login", async (req, res) => {
       try {
         bcrypt.compare(password, user.password, (err, result) => {
           if (result) {
-            const token = jwt.sign({ userId: user._id, email: user.email },process.env.secretCode);
+            const token = jwt.sign({ userId: user._id, email: user.email },"shivansh");
             console.log(token)
             if (token) {
-              jwt.verify(token,process.env.secretCode,(err, decoded) => {
+              jwt.verify(token,"shivansh",(err, decoded) => {
                 if (decoded) {
                   res.json({
                     msg: "Succesfully login",

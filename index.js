@@ -15,7 +15,7 @@ app.use("/dashboard",employeeRouter)
 
 
 
-app.listen(process.env.PORT,async(req,res)=>{
+app.listen(8080,async(req,res)=>{
     try{
         await connection
         console.log("server is running on port 8080")
