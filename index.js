@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 
 
-app.use("/",userRoute)
+app.use("/user",userRoute)
 app.use("/dashboard",employeeRouter)
 
 
